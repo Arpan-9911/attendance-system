@@ -1,0 +1,186 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Body Properties */
+.body{
+  background-attachment: fixed;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+/* Basic styling for the header */
+.header {
+  background-color: #01ADAD;
+  padding: 20px 40px;
+  box-shadow: 2px 0 2px 2px #01ADAD;
+  position: sticky;
+  top: 0;
+}
+
+/* Container for header content */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo a {
+  color: white;
+  width: fit-content;
+  text-align: right;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+/* logo and name styling */
+.logo a .logo-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* logo styling */
+.logo a .logo-div div img{
+  width: 60px;
+  height: 60px;
+  object-fit: fill;
+  margin-right: 30px;
+}
+
+/* Navigation menu styling */
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: Helvetica;
+}
+
+.main-nav ul li a:hover{
+  color: #2f4faf;
+  border-bottom: 3px solid #2f4faf;
+}
+
+/* Active page */
+.main-nav ul li .active{
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+/* Small Screen Main Navbar */
+.container .small-nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 98px;
+  right: -100%;
+  width: 0px;
+  height: 100vh;
+  background-color: #01ADAD;
+  padding: 20px;
+  align-items: center;
+  transition: 0.6s;
+}
+
+.container .small-nav div{
+  margin: 20px;
+}
+
+.container .small-nav div a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.container .small-nav div a:hover{
+  border-bottom: 4px solid white;
+}
+
+.container .small-nav div .active{
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.container .small-screen-icon{
+  display: none;
+  cursor: pointer;
+}
+
+/* Small screen navbar active */
+.container .small-nav.active{
+  right: 0;
+  width: 300px;
+}
+
+/* Media Query at 950px */
+@media (max-width: 1000px) {
+  /* Hiding large-screen Navbar*/
+  .container .main-nav{
+    display: none;
+  }
+
+  /* Logo styling */
+  .logo a {
+    font-size: 15px;
+  }
+
+  /* logo styling */
+  .logo a .logo-div div img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  /* Display Menu Btn */
+  .container .small-screen-icon{
+    display: block;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+/* Media Query at 550px */
+@media (max-width: 550px) {
+  /* reducing padding */
+  .header{
+    padding: 10px;
+  }
+
+  /* Logo styling */
+  .logo a {
+    font-size: 12px;
+  }
+
+  /* logo styling */
+  .logo a .logo-div div img{
+    display: none;
+  }
+  .container .small-nav{
+    top: 67px;
+  }
+  .container .small-nav.active{
+    width: 50%;
+  }
+}

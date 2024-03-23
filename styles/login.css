@@ -1,0 +1,151 @@
+/* Whole page basic designs */
+.form-wrapper{
+  width: fit-content;
+  height: fit-content;
+  padding: 40px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.form-wrapper::before{
+  content: "";
+  position: fixed;
+  top: 105px;
+  bottom: 0;
+  width: 100%;
+  background-image: url(../assets/pgdav-front.jpg);
+  background-size: 100%100%;
+  z-index: -1;
+}
+/* header of the form */
+.form-wrapper header{
+  width: 400px;
+  font-size: 150px;
+  color: #2f4faf;
+  font-weight: 700;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* form designs */
+.form-wrapper form{
+  height: fit-content;
+}
+
+/* Each field of the form */
+.form-wrapper form .field{
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Submit button div */
+.form-wrapper form .field-submit{
+  display: flex;
+  width: 400px;
+}
+
+/* Labels design */
+.form-wrapper form .field label{
+  font-size: 22px;
+  width: 120px;
+  height: 50px;
+  background-color: #2f4faf;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0 0 8px;
+}
+
+/* Input designs */
+.form-wrapper form .field input{
+  font-size: 16px;
+  width: 280px;
+  height: 50px;
+  padding: 5px 10px;
+  border-radius: 0 8px 8px 0;
+  outline: none;
+  border: none;
+  color: rgb(66, 66, 66);
+}
+
+/* Submmit input button */
+.form-wrapper form .field-submit .submit-btn{
+  width: 40%;
+  margin: auto;
+  height: 50px;
+  background-color: #32CD32;
+  box-shadow: 5px 5px 0 0 green;
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+/* Active submit button */
+.form-wrapper form .field-submit .submit-btn:active, .form-wrapper form .field-submit .submit-btn:hover{
+  background-color: green;
+  box-shadow: 4px 4px 0 0 #32CD32;
+}
+@media (max-width: 1000px) {
+  .form-wrapper::before{
+    top: 95px;
+    background-image: url(../assets/pgdav-front-s.jpg);
+  }
+}
+/* Media queries at 550px */
+@media (max-width: 550px) {
+  .form-wrapper::before{
+    top: 60px;
+  }
+  .form-wrapper{
+    padding: 10px;
+  }
+  /* Header design changed */
+  .form-wrapper header{
+    width: 260px;
+    font-size: 100px;
+  }
+
+  /* Each field of the form */
+  .form-wrapper form .field{
+    width: 260px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  .form-wrapper form .field-submit{
+    width: 260px;
+    margin: 20px 0;
+  }
+
+  /* Labels design */
+  .form-wrapper form .field label{
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  /* Input designs */
+  .form-wrapper form .field input{
+    font-size: 14px;
+    width: 180px;
+    height: 30px;
+    border-radius: 0px 2px 2px 0px;
+  }
+  .form-wrapper form .field-submit .submit-btn{
+    height: 30px;
+    font-size: 18px;
+  }
+}

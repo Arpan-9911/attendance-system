@@ -1,0 +1,38 @@
+.imageCarousel{
+  width: 100%;
+  margin-top: 2px;
+  height: 85vh;
+  animation: carousel 12s infinite;
+}
+@keyframes carousel{
+  0%{
+    background-image: url("../assets/college-Img1.jpg");
+    background-size: 100%100%;
+  }
+  25%{
+    background-image: url("../assets/college-Img2.jpg");
+    background-size: 100%100%;
+  }
+  50%{
+    background-image: url("../assets/college-Img3.jpg");
+    background-size: 100%100%;
+  }
+  75%{
+    background-image: url("../assets/college-Img4.jpg");
+    background-size: 100%100%;
+  }
+  100%{
+    background-image: url("../assets/college-Img1.jpg");
+    background-size: 100%100%;
+  }
+}
+@media (max-width: 950px) {
+  .imageCarousel{
+    height: 60vh;
+  }
+}
+@media (max-width: 700px) {
+  .imageCarousel{
+    height: 40vh;
+  }
+}

@@ -1,0 +1,104 @@
+.container-all{
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-all form{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.4);
+}
+.container-all form div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.container-all form div label{
+  width: 150px;
+  height: 50px;
+  background-color: #2f4faf;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid black;
+  border-right: 0;
+}
+.container-all form div input{
+  width: 350px;
+  height: 50px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  border: 2px solid black;
+}
+.container-all form div .disabled{
+  background-color:  #adb4bc;
+}
+.container-all form div .update{
+  width: 40%;
+  height: 45px;
+  margin-left: 60%;
+  border-radius: 0;
+  background-color: #32CD32;
+  box-shadow: 5px 5px 0 0 green;
+  color: white;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 0;
+  transition: 0.3s;
+}
+.container-all form div .update:active, .container-all form div .update:hover{
+  background-color: green;
+  box-shadow: 4px 4px 0 0 #32CD32;
+}
+@media (max-width: 650px) {
+  .container-all form{
+    padding: 10px;
+    width: 280px;
+    border-radius: 5px;
+  }
+  .container-all form div label{
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px 0 0 5px;
+  }
+  .container-all form div input{
+    width: 180px;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 0 5px 5px 0;
+  }
+  .container-all form div .update{
+    width: 50%;
+    margin-left: 50%;
+    font-weight: 600;
+    font-size: 20px;
+    height: 30px;
+  }
+}

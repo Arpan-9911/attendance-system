@@ -1,0 +1,137 @@
+.details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.details div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+.details div label{
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 22px;
+  color: white;
+  background-color: #2f4faf;
+}
+.details div h3{
+  min-width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #b4b7b9;
+}
+.attendanceCounts{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.attendanceCounts table{
+  width: 90%;
+  margin: auto;
+}
+.attendanceCounts table tr th{
+  font-size: 20px;
+  background-color: #2f4faf;
+  color: white;
+  height: 30px;
+}
+.attendanceCounts table tr td{
+  border: 2px solid #2f4faf;
+  height: 30px;
+  padding: 2px 10px;
+  text-align: center;
+}
+.download{
+  position: fixed;
+  width: fit-content;
+  text-align: center;
+  top: 130px;
+  right: 15px;
+}
+.download a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: blue;
+}
+@media (max-width: 900px) {
+  .details div label{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .details div h3{
+    min-width: 200px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .attendanceCounts table{
+    width: 95%;
+  }
+  .attendanceCounts table tr th{
+    font-size: 18px;
+  }
+  .attendanceCounts table tr td{
+    font-size: 16px;
+    height: 25px;
+  }
+  .download{
+    top: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .details div label{
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .details div h3{
+    min-width: 160px;
+    height: 25px;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+  .attendanceCounts table{
+    width: 95%;
+  }
+  .attendanceCounts table tr th{
+    font-size: 10px;
+    height: 20px;
+    padding: 0 4px;
+  }
+  .attendanceCounts table tr td{
+    font-size: 10px;
+    height: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .download{
+    top: auto;
+    bottom: 25px;
+    right: 15px;
+  }
+}

@@ -1,0 +1,101 @@
+.subject{
+  max-width: 600px;
+  min-width: 300px;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: #2f4faf;
+  box-shadow: 7px 7px 0 0 rgb(54, 54, 178);
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.byTeacher{
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 26px;
+  border-radius: 5px;
+  color: white;
+  background-color: #567ae9;
+  font-weight: 700;
+  text-align: center;
+}
+.student{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.byStudent{
+  min-width: 500px;
+  width: fit-content;
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #007C7C;
+  text-align: center;
+  color: white;
+}
+.download{
+  position: fixed;
+  width: fit-content;
+  text-align: center;
+  top: 130px;
+  right: 15px;
+}
+.download a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: blue;
+}
+@media (max-width: 1000px) {
+  .download{
+    top: 120px;
+    right: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .subject{
+    max-width: 300px;
+    min-width: 240px;
+    padding: 6px;
+    font-size: 20px;
+    box-shadow: 5px 5px 0 0 #222299;
+  }
+  .byTeacher{
+    width: fit-content;
+    max-width: 280px;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    font-weight: 500;
+    text-align: center;
+  }
+  .student{
+    padding: 10px;
+  }
+  .byStudent{
+    min-width: 280px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px;
+    padding: 4px 2px;
+  }
+  .download{
+    top: auto;
+    bottom: 25px;
+  }
+}
