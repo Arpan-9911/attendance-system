@@ -17,6 +17,9 @@
 <body>
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <?php
     $studentName = $_SESSION['studentName'];
     $studentRoll = $_SESSION['studentRoll'];

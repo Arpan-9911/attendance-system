@@ -22,6 +22,9 @@
   <!-- Including Header -->
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- Greetings -->
   <div class="greeting">
     <h1>Admin Dashboard</h1>
@@ -230,7 +233,7 @@
           <label for="addTeacher">Add Teachers</label>
           <input type="file" name="addTeacher" id="addTeacher" required>
         </div>
-        <input type="submit" name="addTeacher-btn" class="submit-btn" id="addTeacher-btn" value="Add Teacher">
+        <input type="submit" name="addTeacher-btn" class="submit-btn" id="addTeacher-btn" value="Submit">
       </form>
     </div>
 
@@ -241,7 +244,7 @@
           <label for="addStudent">Add Students</label>
           <input type="file" name="addStudent" id="addStudent" required>
         </div>
-        <input type="submit" name="addStudent-btn" class="submit-btn" id="addStudent-btn" value="Add Student">
+        <input type="submit" name="addStudent-btn" class="submit-btn" id="addStudent-btn" value="Submit">
       </form>
     </div>
 
@@ -252,7 +255,7 @@
           <label for="teacherSubjects">Teacher's Subject List</label>
           <input type="file" name="teacherSubjects" id="teacherSubjects" required>
         </div>
-        <input type="submit" name="teacherSubjects-btn" class="submit-btn" id="teacherSubjects-btn" value="Add List">
+        <input type="submit" name="teacherSubjects-btn" class="submit-btn" id="teacherSubjects-btn" value="Submit">
       </form>
     </div>
 
@@ -263,7 +266,7 @@
           <label for="studentSubjects">Student's Subject List</label>
           <input type="file" name="studentSubjects" id="studentSubjects" required>
         </div>
-        <input type="submit" name="studentSubjects-btn" class="submit-btn" id="studentSubjects-btn" value="Add List">
+        <input type="submit" name="studentSubjects-btn" class="submit-btn" id="studentSubjects-btn" value="Submit">
       </form>
     </div>
   </div>

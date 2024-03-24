@@ -28,6 +28,9 @@
   <!-- Included header -->
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- php for showing all the dates on which attendance was marked -->
   <?php
     $select = "SELECT DISTINCT(date) as attendanceDate FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject' ORDER BY date DESC";

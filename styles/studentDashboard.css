@@ -1,3 +1,14 @@
+.image{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../assets/student.jpg");
+  background-attachment: fixed;
+  background-size: 100%100%;
+  background-position: center;
+}
 .details{
   width: 100%;
   display: flex;
@@ -11,6 +22,8 @@
   align-items: center;
   justify-content: center;
   margin: 5px 0;
+  border-radius: 7px;
+  border: 2px solid black;
 }
 .details div label{
   width: 150px;
@@ -24,6 +37,7 @@
   font-size: 22px;
   color: white;
   background-color: #2f4faf;
+  border-right: 2px solid black;
 }
 .details div h3{
   min-width: 300px;
@@ -36,7 +50,7 @@
   padding-left: 10px;
   font-size: 20px;
   font-weight: 400;
-  background-color: #b4b7b9;
+  background-color: #ececed;
 }
 .attendanceCounts{
   width: 100%;
@@ -61,6 +75,7 @@
   height: 30px;
   padding: 2px 10px;
   text-align: center;
+  background-color: white;
 }
 .download{
   position: fixed;

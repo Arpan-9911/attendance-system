@@ -23,6 +23,10 @@
   <?php include "header.php" ?>
   <!-- link for staff setting -->
   <a href="setting.php" class="setting"><i class="fa-solid fa-user"></i></a>
+
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- getting data using sessions -->
   <?php
     $staffName = $_SESSION['staffName'];
@@ -38,9 +42,9 @@
     ?>
       <div class="attendance-container">
         <h2><?php echo $row['teacherSubject'] ?></h2>
-        <a href="markAttendance.php?subject=<?php echo $row['teacherSubject'] ?>">Mark Attendance</a>
-        <a href="viewAttendance.php?subject=<?php echo $row['teacherSubject'] ?>">View Overall Attendance</a>
-        <a href="editAttendance.php?subject=<?php echo $row['teacherSubject'] ?>">Edit Attendance</a>
+        <a href="markAttendance.php?subject=<?php echo $row['teacherSubject'] ?>"><i class="fa-solid fa-circle-check"></i> Mark Attendance</a>
+        <a href="viewAttendance.php?subject=<?php echo $row['teacherSubject'] ?>"><i class="fa-solid fa-circle-check"></i> View Overall Attendance</a>
+        <a href="editAttendance.php?subject=<?php echo $row['teacherSubject'] ?>"><i class="fa-solid fa-circle-check"></i> Edit Attendance</a>
       </div>
     <?php } ?>
   </div>

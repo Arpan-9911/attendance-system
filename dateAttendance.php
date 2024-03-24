@@ -22,6 +22,9 @@
   <!-- Including header -->
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- Checking details passed or not -->
   <?php
     $staffName = $_SESSION['staffName'];

@@ -1,3 +1,14 @@
+.image{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../assets/staff.jpg");
+  background-attachment: fixed;
+  background-size: 100%100%;
+  background-position: center;
+}
 .attendance-container{
   display: flex;
   flex-direction: row;

@@ -20,6 +20,10 @@
 <body>
   <!-- header included -->
   <?php include "header.php" ?>
+
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- fetching data -->
   <?php
     $staffEmail = $_SESSION['staffEmail'];

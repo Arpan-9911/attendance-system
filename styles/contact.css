@@ -1,0 +1,9 @@
+.image{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url(../assets/contact.jpg);
+  background-size: 100%100%;
+  z-index: -1;
+}

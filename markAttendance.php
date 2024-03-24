@@ -21,6 +21,10 @@
 <body>
   <!-- header included -->
   <?php include "header.php" ?>
+
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- checking for staff is logged or not -->
   <?php
     $staffName = $_SESSION['staffName'];

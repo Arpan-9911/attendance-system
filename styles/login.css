@@ -11,13 +11,12 @@
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.form-wrapper::before{
-  content: "";
+.image{
   position: fixed;
-  top: 105px;
+  top: 0;
   bottom: 0;
   width: 100%;
-  background-image: url(../assets/pgdav-front.jpg);
+  background-image: url(../assets/login.jpg);
   background-size: 100%100%;
   z-index: -1;
 }
@@ -105,7 +104,6 @@
 @media (max-width: 1000px) {
   .form-wrapper::before{
     top: 95px;
-    background-image: url(../assets/pgdav-front-s.jpg);
   }
 }
 /* Media queries at 550px */
@@ -115,6 +113,7 @@
   }
   .form-wrapper{
     padding: 10px;
+    margin: 100px auto;
   }
   /* Header design changed */
   .form-wrapper header{

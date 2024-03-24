@@ -28,6 +28,9 @@
   <!-- header included -->
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- displaying overall attendance teaken by teacher -->
   <?php
     $query = "SELECT COUNT(DISTINCT DATE(date)) AS teacherTaken FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject'";

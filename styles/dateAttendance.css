@@ -1,3 +1,14 @@
+.image{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../assets/attendance.jpg");
+  background-attachment: fixed;
+  background-size: 100%100%;
+  background-position: center;
+}
 .fixed-col{
   width: 100%;
   padding: 20px;

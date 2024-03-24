@@ -1,3 +1,15 @@
+.image{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../assets/admin.avif");
+  background-attachment: fixed;
+  background-size: 100%100%;
+  background-position: center;
+}
+
 /* Top div for greeting */
 .greeting{
   width: 100%;
@@ -125,6 +137,7 @@
   outline: none;
   border: none;
   box-shadow: 5px 5px 0 0 rgb(153, 13, 13);
+  transition: 0.5s;
 }
 .newSem button:hover,.newSem button:active{
   background-color: rgb(153, 13, 13);

@@ -18,6 +18,9 @@
   <!-- Header Page Included -->
   <?php include "header.php" ?>
 
+  <!-- Image -->
+  <div class="image"></div>
+
   <!-- php to ckeck user already logged or try to log in -->
   <?php
     // If user is already logged in
