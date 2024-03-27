@@ -18,5 +18,8 @@
   <?php include "header.php" ?>
 
   <div class="imageCarousel"></div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
 </body>
 </html>

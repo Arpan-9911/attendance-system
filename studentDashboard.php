@@ -33,6 +33,7 @@
     }
     else {
   ?>
+    <div class="all">
       <div class="details">
         <div>
           <label for="studentName">Name</label>
@@ -80,6 +81,11 @@
       echo "</div>";
     }
   ?>
+    </div>
   <div class="download"><a href="studentDownload.php"><i class="fa-solid fa-download"></i></a></div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+
 </body>
 </html>

@@ -11,6 +11,10 @@
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.main{
+  width: 100%;
+  min-height: 90vh;
+}
 .image{
   position: fixed;
   top: 0;

@@ -31,20 +31,26 @@
   <!-- Image -->
   <div class="image"></div>
 
-  <!-- php for showing all the dates on which attendance was marked -->
-  <?php
-    $select = "SELECT DISTINCT(date) as attendanceDate FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject' ORDER BY date DESC";
-    $result = mysqli_query($connection, $select);
-    if ($result) {
-      echo "<div class='attendance-container'>";
-      echo "<div><h2>$subject</h2></div>";
-      while ($row = mysqli_fetch_array($result)){
-  ?>
-        <a href="dateAttendance.php?subject=<?php echo $subject ?>&date=<?php echo $row['attendanceDate'] ?>"><?php echo date_format(date_create($row['attendanceDate']), 'd-m-Y') ?></a>
-  <?php
+  <div class="mainData">
+    <!-- php for showing all the dates on which attendance was marked -->
+    <?php
+      $select = "SELECT DISTINCT(date) as attendanceDate FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject' ORDER BY date DESC";
+      $result = mysqli_query($connection, $select);
+      if ($result) {
+        echo "<div class='attendance-container'>";
+        echo "<div><h2>$subject</h2></div>";
+        while ($row = mysqli_fetch_array($result)){
+    ?>
+          <a href="dateAttendance.php?subject=<?php echo $subject ?>&date=<?php echo $row['attendanceDate'] ?>"><?php echo date_format(date_create($row['attendanceDate']), 'd-m-Y') ?></a>
+    <?php
+        }
+        echo "</div>";
       }
-      echo "</div>";
-    }
-  ?>
+    ?>
+  </div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+  
 </body>
 </html>

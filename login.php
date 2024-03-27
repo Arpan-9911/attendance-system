@@ -92,22 +92,28 @@
     }
   ?>
 
-  <!-- Login Form -->
-  <div class="form-wrapper">
-    <header><i class="fa-solid fa-circle-user"></i></header>
-    <form method="post">
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" autocomplete="off" required placeholder="Enter">
-      </div>
-      <div class="field">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required placeholder="Enter">
-      </div>
-      <div class="field-submit">
-        <input type="submit" name="login" class="submit-btn" id="login" value="Login">
-      </div>
-    </form>
+  <div class="main">
+    <!-- Login Form -->
+    <div class="form-wrapper">
+      <header><i class="fa-solid fa-circle-user"></i></header>
+      <form method="post">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" autocomplete="off" required placeholder="Enter">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required placeholder="Enter">
+        </div>
+        <div class="field-submit">
+          <input type="submit" name="login" class="submit-btn" id="login" value="Login">
+        </div>
+      </form>
+    </div>
   </div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+
 </body>
 </html>

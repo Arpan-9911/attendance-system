@@ -9,6 +9,10 @@
   background-size: 100%100%;
   background-position: center;
 }
+form{
+  width: 100%;
+  min-height: 90vh;
+}
 .fixed-col{
   width: 100%;
   padding: 20px;

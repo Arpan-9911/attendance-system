@@ -9,6 +9,10 @@
   background-size: 100%100%;
   background-position: center;
 }
+.mainData{
+  width: 100%;
+  min-height: 90vh;
+}
 .attendance-container{
   display: flex;
   flex-direction: row;

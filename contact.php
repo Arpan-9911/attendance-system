@@ -19,5 +19,8 @@
 
   <!-- Image -->
   <div class="image"></div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
 </body>
 </html>

@@ -273,6 +273,10 @@
   <div class="newSem">
     <button onclick="newSem()">Start New Semester</button>
   </div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+
   <script>
     function newSem() {
       if(confirm("Are you sure !!")){

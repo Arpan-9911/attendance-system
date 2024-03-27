@@ -31,45 +31,51 @@
   <!-- Image -->
   <div class="image"></div>
 
-  <!-- displaying overall attendance teaken by teacher -->
-  <?php
-    $query = "SELECT COUNT(DISTINCT DATE(date)) AS teacherTaken FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject'";
-    $result = mysqli_query($connection, $query);
-    if ($result) {
-      $row = mysqli_fetch_assoc($result);
-      $count = $row['teacherTaken'];
-  ?>
-      <div class="subject"><?php echo $subject ?></div>
-      <div class="byTeacher">Total Attendance Taken: <?php echo $count ?> Days</div>
-  <?php
-    }
-    else {
-  ?>
-      echo "<script>alert('Error occurred while fetching data');</script>";
-      echo "<script>window.location.href ='staffDashboard.php';</script>";
-  <?php
-    }
-  ?>
-  <!-- displaying total attendance attended by student -->
-  <?php
-    $present_counts = array();
-    $studentQuery = "SELECT studentName, studentRoll, SUM(CASE WHEN attendance = 'P' THEN 1 ELSE 0 END) AS presentDays FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject' GROUP BY studentName, studentRoll ORDER BY studentRoll ASC";
-    $studentResult = mysqli_query($connection, $studentQuery);
-    if ($studentResult) {
-      echo "<div class='student'>";
-      while($row = mysqli_fetch_assoc($studentResult)){
-        $presentCount = $row['presentDays'];
-  ?>
-        <div class="byStudent"><?php echo $row['studentName'] . ", " . $row['studentRoll'] . " :- " . $presentCount . " Days, " . number_format(($presentCount*100)/$count, 2) . "%"?></div>
-  <?php
+  <div class="mainData">
+    <!-- displaying overall attendance teaken by teacher -->
+    <?php
+      $query = "SELECT COUNT(DISTINCT DATE(date)) AS teacherTaken FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject'";
+      $result = mysqli_query($connection, $query);
+      if ($result) {
+        $row = mysqli_fetch_assoc($result);
+        $count = $row['teacherTaken'];
+    ?>
+        <div class="subject"><?php echo $subject ?></div>
+        <div class="byTeacher">Total Attendance Taken: <?php echo $count ?> Days</div>
+    <?php
       }
-      echo "</div>";
-    }
-    else {
-      echo "<script>alert('Error occurred while fetching data');</script>";
-      echo "<script>window.location.href ='staffDashboard.php';</script>";
-    }
-  ?>
+      else {
+    ?>
+        echo "<script>alert('Error occurred while fetching data');</script>";
+        echo "<script>window.location.href ='staffDashboard.php';</script>";
+    <?php
+      }
+    ?>
+    <!-- displaying total attendance attended by student -->
+    <?php
+      $present_counts = array();
+      $studentQuery = "SELECT studentName, studentRoll, SUM(CASE WHEN attendance = 'P' THEN 1 ELSE 0 END) AS presentDays FROM `attendance` WHERE teacherName = '$staffName' AND subject = '$subject' GROUP BY studentName, studentRoll ORDER BY studentRoll ASC";
+      $studentResult = mysqli_query($connection, $studentQuery);
+      if ($studentResult) {
+        echo "<div class='student'>";
+        while($row = mysqli_fetch_assoc($studentResult)){
+          $presentCount = $row['presentDays'];
+    ?>
+          <div class="byStudent"><?php echo $row['studentName'] . ", " . $row['studentRoll'] . " :- " . $presentCount . " Days, " . number_format(($presentCount*100)/$count, 2) . "%"?></div>
+    <?php
+        }
+        echo "</div>";
+      }
+      else {
+        echo "<script>alert('Error occurred while fetching data');</script>";
+        echo "<script>window.location.href ='staffDashboard.php';</script>";
+      }
+    ?>
+  </div>  
   <div class="download"><a href="staffDownload.php?subject=<?php echo $subject ?>"><i class="fa-solid fa-download"></i></a></div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+
 </body>
 </html>

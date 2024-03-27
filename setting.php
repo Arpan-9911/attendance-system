@@ -73,5 +73,9 @@
       </div>
     </form>
   </div>
+
+  <!-- Footer included -->
+  <?php include "footer.php" ?>
+
 </body>
 </html>
